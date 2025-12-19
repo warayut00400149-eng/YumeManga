@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Manga Icons</title>
+
+<style>
+body {
+  font-family: sans-serif;
+  background: #111;
+  padding: 20px;
+}
+
+/* grid */
+.manga-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* card */
+.manga-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* image */
+.manga-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+/* hover zoom */
+.manga-card:hover img {
+  transform: scale(1.1);
+}
+
+/* overlay */
+.manga-title {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.manga-card:hover .manga-title {
+  opacity: 1;
+}
+
+.manga-title span {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<div class="manga-grid">
+
+  <a class="manga-card" href="https://www.phoenixnext.com" target="_blank">
+    <img src="https://via.placeholder.com/300x420?text=ARIA" alt="">
+    <div class="manga-title"><span>คุณอาเรียโต๊ะข้างๆพูดรัสเซียหวานใส่ซะหัวใจจะวาย</span></div>
+  </a>
+
+  <a class="manga-card" href="https://www.phoenixnext.com" target="_blank">
+    <img src="https://via.placeholder.com/300x420?text=YAMADA" alt="">
+    <div class="manga-title"><span>รักสุดฟินเลเวล 999 กับยามาดะคุง</span></div>
+  </a>
+
+  <a class="manga-card" href="https://www.phoenixnext.com" target="_blank">
+    <img src="https://via.placeholder.com/300x420?text=HIKARU" alt="">
+    <div class="manga-title"><span>หน้าร้อนที่ฮิคารุจากไป</span></div>
+  </a>
+
+</div>
+
+</body>
+</html>
